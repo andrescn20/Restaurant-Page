@@ -1,0 +1,23 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "Restaurant Page for TOP JS Course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrescn20/Restaurant-Page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrescn20/Restaurant-Page/issues"
+  },
+  "homepage": "https://github.com/andrescn20/Restaurant-Page#readme",
+  "devDependencies": {
+    "webpack-cli": "^4.10.0"
+  }
+}
