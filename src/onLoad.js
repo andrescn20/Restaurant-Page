@@ -44,12 +44,14 @@ const Footer = () => {
 
   const creator = document.createTextNode("Created by: andrescn20");
   const gitLogo = new Image(30, 30);
+  gitLogo.setAttribute("id", "gitLogo");
   const logoLink = document.createElement("a");
   logoLink.href = "https://github.com/andrescn20";
   gitLogo.src = gitHubLogo;
 
-  footer.appendChild(creator);
-  footer.appendChild(logoLink);
+  footer.appendChild(fooTextContainer);
+  fooTextContainer.appendChild(creator);
+  fooTextContainer.appendChild(logoLink);
   logoLink.appendChild(gitLogo);
 
   return footer;

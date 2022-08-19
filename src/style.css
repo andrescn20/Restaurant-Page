@@ -21,6 +21,7 @@ footer {
   justify-content: center;
   border-top: 3px solid goldenrod;
   color: white;
+  font-size: bold;
 }
 
 #content {
@@ -71,7 +72,8 @@ h1 {
 }
 
 h1 {
-  font-family: "VikingFonts";
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
 }
 
 .pContainer {
@@ -90,4 +92,33 @@ h1 {
 .para {
   text-align: center;
   padding: 15px;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  margin: 15px;
+}
+
+button:hover {
+  border-bottom: 2px solid goldenrod;
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsla(53, 10%, 35%, 0.63);
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+p {
+  margin: 0;
+}
+#gitLogo {
+  margin: 0px;
+  border-radius: 50%;
+  margin-left: 5px;
 }
