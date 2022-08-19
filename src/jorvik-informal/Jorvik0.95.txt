@@ -1,0 +1,45 @@
+Jorvik Informal (version 0.95)       by fontgrube.de
+
+In May 2000 I found a symple of the typeface "York" in an old specimen book. It was, so to speak, love at first sight. Unfortunately no hint as to who had made that beautiful face, neither in the book nor in the internet, where York was unknown as a typeface by then. So the only solution was to make a version of my own with the abilities and the tools I had then.
+
+Meanwhile the secret of York has been disclosed. Georg Salden designed the York face in 1966 or 1967. There is, as far as I know, thirteen years later, no digital version as yet (April 2013).
+
+I am well aware of the shortcomings ov my 'quick-and-dirty' versons that have been pointed out in the internet. More faithfulness to the original design would have required much more time than I could spare.
+
+"Jorvik", by the way, is the old Viking name of the city of York in North England. 
+
+
+April 2013
+Andreas Höfeld
+www.fontgrube.de
+
+P.S.:
+Here is a note on typophile.com about York and my take on it:
+http://typophile.com/node/19943
+
+===========================
+LICENSE FOR JORVIK INFORMAL
+
+Use
+---
+You may use this font software free of charge for both personal and commercial use. 
+
+Conversion and modification
+---------------------------
+You may convert this font to other formats including web font formats or modify it for your own purposes. You may use web font formats of this font to display text on your web pages, but you may not explicitly offer converted or modified versions of this font software for download or re-use by others, unless you have received permission in writing to do so.
+
+Distribution
+------------
+You may distribute this font on digital media or as a download on your website as long as you comply with the following rules. Violation of one or more of these rules terminates your distribution license and you have to stop distribution immediately:
+
+1. You may offer the font only in form of a ZIP file containing only the font software and this readme file. 
+2. You are not allowed to distribute the font software without this text file.
+3. You may not redistribute modified or converted copies of the font software (see above).
+4. You may not add advertising messages in text or graphics form to the zip file.
+5. You are not allowed to create a self-extracting executable file containing the font software or require the user 6. to run or install a download manager or other software to get the download.
+7. You may not charge money for the download. 
+8. If you want to distribute this font on storage media (CD DVD) produced in numbers of more than 50 identical copies, you must send me a specimen copy.
+
+Updates
+-------
+Further updates of this font may be published on my web site fontgrube.de. Have fun with this font.

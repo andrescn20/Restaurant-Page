@@ -1,9 +1,11 @@
 import { homeFunction } from "./home";
+import { menuFunction } from "./menu";
+import { aboutFunction } from "./about";
 import gitHubLogo from "./gitHubLogo.png";
+import homeImg from "./Thorkell.jpg";
 
 const Header = () => {
-  const header = document.createElement("div");
-  header.setAttribute("id", "header");
+  const header = document.createElement("header");
 
   header.appendChild(Button("Home"));
   header.appendChild(Button("Menu"));
@@ -29,10 +31,10 @@ const buttonAction = (btnName) => {
       homeFunction();
       break;
     case "Menu":
-      alert("Menu");
+      menuFunction();
       break;
     case "About":
-      alert("About");
+      aboutFunction();
       break;
   }
 };
@@ -53,9 +55,19 @@ const Footer = () => {
   return footer;
 };
 
-const Clean = () => {
+const modifiedHome = () => {
   const content = document.getElementById("content");
-  content.innerHtml = "";
+  const thorkell = new Image(356, 200);
+  thorkell.src = homeImg;
+  content.appendChild(thorkell);
+  Greeting();
 };
 
-export { Header, Footer, Clean };
+const Greeting = () => {
+  const greeting = document.createTextNode(
+    "Greetings Warrior. Welcome to Valhalla Dinning Hall. Here, your apetite would face his most delicious challenge. Are you ready?"
+  );
+  content.appendChild(greeting);
+};
+
+export { Header, Footer, modifiedHome };
