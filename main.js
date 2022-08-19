@@ -368,7 +368,7 @@ var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_g
 var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
 var ___CSS_LOADER_URL_REPLACEMENT_3___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_3___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n  font-family: \"VikingFonts\";\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") format(\"ttf\"),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") format(\"otf\");\n}\nbody {\n  height: 100vh;\n  display: grid;\n  grid-template-rows: 15vh 1fr 12vh;\n  margin: 0px;\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ");\n  background-size: auto 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\nfooter {\n  grid-row: 3/4;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-top: 3px solid goldenrod;\n  color: white;\n}\n\n#content {\n  min-height: 100%;\n  grid-row: 2/3;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ") no-repeat center;\n  padding-left: 30px;\n  padding-right: 30px;\n}\n\nheader {\n  grid-row: 1/2;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-bottom: 3px solid goldenrod;\n}\n\nimg {\n  margin: 20px;\n}\n\n.image {\n  width: 40vw;\n  grid-area: a;\n  border-radius: 10%;\n  border: solid 2px white;\n}\n\n#content.grid {\n  display: grid;\n  grid-template-areas:\n    \"a b\"\n    \"c c\";\n  grid-template-columns: 1fr 1fr;\n  justify-items: center;\n}\n#about {\n  grid-area: c;\n}\nh2,\nh1 {\n  grid-area: b;\n}\n\nh1 {\n  font-family: \"VikingFonts\";\n}\n\n.pContainer {\n  max-width: 60vw;\n  grid-area: c;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\n    Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  color: whitesmoke;\n  border: solid 2px white;\n  background-color: black;\n}\n\n.para {\n  text-align: center;\n  padding: 15px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n  font-family: \"VikingFonts\";\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") format(\"ttf\"),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") format(\"otf\");\n}\nbody {\n  height: 100vh;\n  display: grid;\n  grid-template-rows: 15vh 1fr 12vh;\n  margin: 0px;\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ");\n  background-size: auto 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\nfooter {\n  grid-row: 3/4;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-top: 3px solid goldenrod;\n  color: white;\n  font-size: bold;\n}\n\n#content {\n  min-height: 100%;\n  grid-row: 2/3;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ") no-repeat center;\n  padding-left: 30px;\n  padding-right: 30px;\n}\n\nheader {\n  grid-row: 1/2;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-bottom: 3px solid goldenrod;\n}\n\nimg {\n  margin: 20px;\n}\n\n.image {\n  width: 40vw;\n  grid-area: a;\n  border-radius: 10%;\n  border: solid 2px white;\n}\n\n#content.grid {\n  display: grid;\n  grid-template-areas:\n    \"a b\"\n    \"c c\";\n  grid-template-columns: 1fr 1fr;\n  justify-items: center;\n}\n#about {\n  grid-area: c;\n}\nh2,\nh1 {\n  grid-area: b;\n}\n\nh1 {\n  font-family: \"Franklin Gothic Medium\", \"Arial Narrow\", Arial, sans-serif;\n  color: white;\n}\n\n.pContainer {\n  max-width: 60vw;\n  grid-area: c;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\n    Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  color: whitesmoke;\n  border: solid 2px white;\n  background-color: black;\n}\n\n.para {\n  text-align: center;\n  padding: 15px;\n}\n\nbutton {\n  background: none;\n  border: none;\n  font-size: 2rem;\n  margin: 15px;\n}\n\nbutton:hover {\n  border-bottom: 2px solid goldenrod;\n}\n\nfooter div {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background-color: hsla(53, 10%, 35%, 0.63);\n  padding: 5px;\n  border-radius: 10px;\n  font-weight: bold;\n}\np {\n  margin: 0;\n}\n#gitLogo {\n  margin: 0px;\n  border-radius: 50%;\n  margin-left: 5px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -17825,12 +17825,14 @@ const Footer = () => {
 
   const creator = document.createTextNode("Created by: andrescn20");
   const gitLogo = new Image(30, 30);
+  gitLogo.setAttribute("id", "gitLogo");
   const logoLink = document.createElement("a");
   logoLink.href = "https://github.com/andrescn20";
   gitLogo.src = _gitHubLogo_png__WEBPACK_IMPORTED_MODULE_3__;
 
-  footer.appendChild(creator);
-  footer.appendChild(logoLink);
+  footer.appendChild(fooTextContainer);
+  fooTextContainer.appendChild(creator);
+  fooTextContainer.appendChild(logoLink);
   logoLink.appendChild(gitLogo);
 
   return footer;
@@ -18021,7 +18023,7 @@ module.exports = __webpack_require__.p + "cd0dfb82de6a5cf6ebb5.jpg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "f09786dedb145198cf34.png";
+module.exports = __webpack_require__.p + "a3555e4f5eb16bdeda26.png";
 
 /***/ })
 /******/ 	]);
