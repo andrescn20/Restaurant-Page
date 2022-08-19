@@ -352,12 +352,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(11);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(12), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(13), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(14), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(15), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
+var ___CSS_LOADER_URL_REPLACEMENT_3___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_3___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#content {\n  border: solid 2px black;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n  font-family: \"VikingFonts\";\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") format(\"ttf\"),\n    url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") format(\"otf\");\n}\nbody {\n  height: 100vh;\n  display: grid;\n  grid-template-rows: 15vh 1fr 12vh;\n  margin: 0px;\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ");\n  background-size: auto 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\nfooter {\n  grid-row: 3/4;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-top: 3px solid goldenrod;\n  color: white;\n}\n\n#content {\n  min-height: 100%;\n  grid-row: 2/3;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ") no-repeat center;\n  padding-left: 30px;\n  padding-right: 30px;\n}\n\nheader {\n  grid-row: 1/2;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-bottom: 3px solid goldenrod;\n}\n\nimg {\n  margin: 20px;\n}\n\n.image {\n  width: 40vw;\n  grid-area: a;\n  border-radius: 10%;\n  border: solid 2px white;\n}\n\n#content.grid {\n  display: grid;\n  grid-template-areas:\n    \"a b\"\n    \"c c\";\n  grid-template-columns: 1fr 1fr;\n  justify-items: center;\n}\n#about {\n  grid-area: c;\n}\nh2,\nh1 {\n  grid-area: b;\n}\n\nh1 {\n  font-family: \"VikingFonts\";\n}\n\n.pContainer {\n  max-width: 60vw;\n  grid-area: c;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\n    Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  color: whitesmoke;\n  border: solid 2px white;\n  background-color: black;\n}\n\n.para {\n  text-align: center;\n  padding: 15px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -483,6 +494,69 @@ module.exports = function (cssWithMappingToString) {
 
 /***/ }),
 /* 11 */
+/***/ ((module) => {
+
+"use strict";
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    options = {};
+  }
+
+  if (!url) {
+    return url;
+  }
+
+  url = String(url.__esModule ? url.default : url); // If url is already wrapped in quotes, remove them
+
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  }
+
+  if (options.hash) {
+    url += options.hash;
+  } // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+
+
+  if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+
+  return url;
+};
+
+/***/ }),
+/* 12 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "b542867ba3e118b3f0d5.TTF";
+
+/***/ }),
+/* 13 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "fbcbd57c432083783129.otf";
+
+/***/ }),
+/* 14 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "f0f037df7e3f28f84ca4.jpg";
+
+/***/ }),
+/* 15 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "111147d60e10aa8492d6.jpg";
+
+/***/ }),
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* module decorator */ module = __webpack_require__.nmd(module);
@@ -17690,24 +17764,29 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 
 /***/ }),
-/* 12 */
+/* 17 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Clean": () => (/* binding */ Clean),
 /* harmony export */   "Footer": () => (/* binding */ Footer),
-/* harmony export */   "Header": () => (/* binding */ Header)
+/* harmony export */   "Header": () => (/* binding */ Header),
+/* harmony export */   "modifiedHome": () => (/* binding */ modifiedHome)
 /* harmony export */ });
-/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
-/* harmony import */ var _gitHubLogo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(15);
+/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(20);
+/* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(21);
+/* harmony import */ var _gitHubLogo_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(23);
+/* harmony import */ var _Thorkell_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19);
+
+
+
 
 
 
 const Header = () => {
-  const header = document.createElement("div");
-  header.setAttribute("id", "header");
+  const header = document.createElement("header");
 
   header.appendChild(Button("Home"));
   header.appendChild(Button("Menu"));
@@ -17733,10 +17812,10 @@ const buttonAction = (btnName) => {
       (0,_home__WEBPACK_IMPORTED_MODULE_0__.homeFunction)();
       break;
     case "Menu":
-      alert("Menu");
+      (0,_menu__WEBPACK_IMPORTED_MODULE_1__.menuFunction)();
       break;
     case "About":
-      alert("About");
+      (0,_about__WEBPACK_IMPORTED_MODULE_2__.aboutFunction)();
       break;
   }
 };
@@ -17748,7 +17827,7 @@ const Footer = () => {
   const gitLogo = new Image(30, 30);
   const logoLink = document.createElement("a");
   logoLink.href = "https://github.com/andrescn20";
-  gitLogo.src = _gitHubLogo_png__WEBPACK_IMPORTED_MODULE_1__;
+  gitLogo.src = _gitHubLogo_png__WEBPACK_IMPORTED_MODULE_3__;
 
   footer.appendChild(creator);
   footer.appendChild(logoLink);
@@ -17757,31 +17836,10 @@ const Footer = () => {
   return footer;
 };
 
-const Clean = () => {
+const modifiedHome = () => {
   const content = document.getElementById("content");
-  content.innerHtml = "";
-};
-
-
-
-
-/***/ }),
-/* 13 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "homeFunction": () => (/* binding */ homeFunction)
-/* harmony export */ });
-/* harmony import */ var _Thorkell_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
-
-
-const homeFunction = () => {
-  const content = document.getElementById("content");
-  content.innerHTML = "";
   const thorkell = new Image(356, 200);
-  thorkell.src = _Thorkell_jpg__WEBPACK_IMPORTED_MODULE_0__;
+  thorkell.src = _Thorkell_jpg__WEBPACK_IMPORTED_MODULE_4__;
   content.appendChild(thorkell);
   Greeting();
 };
@@ -17797,14 +17855,169 @@ const Greeting = () => {
 
 
 /***/ }),
-/* 14 */
+/* 18 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "homeFunction": () => (/* binding */ homeFunction)
+/* harmony export */ });
+/* harmony import */ var _Thorkell_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(19);
+
+
+const homeFunction = () => {
+  const content = document.getElementById("content");
+  content.innerHTML = "";
+  content.setAttribute("class", "grid");
+  const title = document.createElement("h1");
+  const thorkell = new Image();
+  thorkell.src = _Thorkell_jpg__WEBPACK_IMPORTED_MODULE_0__;
+  title.innerHTML = "Valhalla Meats";
+  content.appendChild(title);
+  content.appendChild(thorkell);
+  thorkell.setAttribute("class", "image");
+  Greeting();
+};
+
+const Greeting = () => {
+  const greetingContainer = document.createElement("div");
+  greetingContainer.setAttribute("class", "pContainer");
+  const greeting = document.createElement("p");
+  greeting.innerText =
+    "Greetings Warrior. Welcome to Valhalla Dinning Hall. Here, your apetite would face its most delicious challenge. Are you ready?";
+  greeting.setAttribute("class", "para");
+  greetingContainer.appendChild(greeting);
+  content.appendChild(greetingContainer);
+};
+
+
+
+
+/***/ }),
+/* 19 */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 module.exports = __webpack_require__.p + "dc3a646a48892a9039f1.jpg";
 
 /***/ }),
-/* 15 */
+/* 20 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "menuFunction": () => (/* binding */ menuFunction)
+/* harmony export */ });
+// import menuImg from "./DinningHall.jpg";
+
+const menuFunction = () => {
+  const content = document.getElementById("content");
+  content.innerHTML = "";
+  content.removeAttribute("class", "grid");
+
+  const plate1 = {
+    name: "Thorfins Revenge",
+    description:
+      "Whole Tomahawk Steak cooked directly in contact with the charcoal",
+    price: "$35",
+  };
+  const plate2 = {
+    name: "Thorkell Roast",
+    description:
+      "Four-Bone Rib Roast with poached potatoes. Our biggest plate, fit for a giant berserker (or 4 regular warriors)",
+    price: "$100",
+  };
+  const plate3 = {
+    name: "The impostor",
+    description:
+      "Coming from another land: The Queen of beef. Delicious juicy picanha steaks",
+    price: "$30",
+  };
+  const plate4 = {
+    name: "Royal delight",
+    description:
+      "For those who eat with grace but yearn for battle. A perfect Ribeye basted in butter",
+    price: " $45",
+  };
+
+  AppendPlates(plate1);
+  AppendPlates(plate2);
+  AppendPlates(plate3);
+  AppendPlates(plate4);
+};
+
+const AppendPlates = (plate) => {
+  const nameContainer = document.createElement("p");
+  nameContainer.innerText = plate.name;
+  nameContainer.setAttribute("class", "plateName");
+
+  const descriptionContainer = document.createElement("p");
+  descriptionContainer.innerText = plate.description;
+  descriptionContainer.setAttribute("class", "description");
+
+  const priceContainer = document.createElement("p");
+  priceContainer.innerText = plate.price;
+  priceContainer.setAttribute("class", "price");
+
+  content.appendChild(nameContainer);
+  content.appendChild(descriptionContainer);
+  content.appendChild(priceContainer);
+};
+
+
+
+
+/***/ }),
+/* 21 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "aboutFunction": () => (/* binding */ aboutFunction)
+/* harmony export */ });
+/* harmony import */ var _Askeladd_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+
+
+const aboutFunction = () => {
+  const content = document.getElementById("content");
+  const title = document.createElement("h2");
+  content.innerHTML = "";
+  content.setAttribute("class", "grid");
+  const askeladd = new Image();
+  askeladd.src = _Askeladd_jpg__WEBPACK_IMPORTED_MODULE_0__;
+  content.appendChild(title);
+  content.appendChild(askeladd);
+  askeladd.setAttribute("class", "image");
+
+  About();
+};
+
+const About = () => {
+  const aboutContainer = document.createElement("div");
+  aboutContainer.setAttribute("class", "pContainer");
+  const about = document.createElement("p");
+  about.innerText =
+    " We know that face. The irrational desire of eating a juicy chunk of beef. Dont't worry, thats why we are here. Valhalla's meats is a place thought specially for those with a genuine viking apetite, those who wage war against their hunger. Enjoy yourself with the best cuts of meat cooked to perfection.";
+  about.setAttribute("class", "para");
+  aboutContainer.appendChild(about);
+  content.appendChild(aboutContainer);
+};
+
+
+
+
+/***/ }),
+/* 22 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "cd0dfb82de6a5cf6ebb5.jpg";
+
+/***/ }),
+/* 23 */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -17839,6 +18052,9 @@ module.exports = __webpack_require__.p + "f09786dedb145198cf34.png";
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
@@ -17922,6 +18138,32 @@ module.exports = __webpack_require__.p + "f09786dedb145198cf34.png";
 /******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			0: 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
@@ -17934,9 +18176,9 @@ var __webpack_exports__ = {};
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(16);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _onLoad__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
+/* harmony import */ var _onLoad__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(17);
 
 
 
